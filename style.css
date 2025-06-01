@@ -1,0 +1,67 @@
+body {
+    background-color: #1A183E;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+#container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Bong bóng bay lên */
+@keyframes move {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(50vh);
+    }
+}
+
+/* Chữ & ảnh rơi xuống */
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(calc(100vh + 100px)) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.falling-text {
+    position: absolute;
+    font-size: 22px;
+    animation: fall linear infinite;
+    animation-fill-mode: both;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    top: -30px;
+    color: #FFC0CB;
+    text-shadow: 0 0 5px white;
+}
+
+.falling-img {
+    position: absolute;
+    animation: fall linear infinite;
+    animation-fill-mode: both;
+    pointer-events: none;
+    top: -50px;
+    user-select: none;
+}
