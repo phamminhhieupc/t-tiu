@@ -9,8 +9,8 @@ const count = 60;
 // Danh sách ảnh trong thư mục /images
 const imageSources = [
   "images/IMG_0802.PNG",
-  "images/IMG_0829.PNG",
-  "images/IMG_1106.PNG",
+  "images/IMG_0829.png",
+  "images/IMG_1106.png",
   "images/IMG_1212.PNG"
 ];
 
